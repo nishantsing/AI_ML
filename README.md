@@ -23,12 +23,12 @@
 ## 15 Beginner ML Projects (Learn by doing)
 
 1. Iris Flower (classification)
-  - scikit learn / Tensorflow (DataSet)
-  - Jupyter Notebook, Google collab, vscode
-  - split data into training and testing samples. Perform scailing on it.
-  - Classification Algos - (Linear/Logistic Regression, SVM, KNN, Decision Trees)
-  - Train model on training data.
-  - Evaluate performance on testing data(Precision, Recall, Accuracy, F-1 Score, Confusion Matrix)
+    - scikit learn / Tensorflow (DataSet)
+    - Jupyter Notebook, Google collab, vscode
+    - split data into training and testing samples. Perform scailing on it.
+    - Classification Algos - (Linear/Logistic Regression, SVM, KNN, Decision Trees)
+    - Train model on training data.
+    - Evaluate performance on testing data(Precision, Recall, Accuracy, F-1 Score, Confusion Matrix)
 
 2. Predicting the price of house based on its features using supervise learning
    - Kaggle, UCI repository (DataSet)
