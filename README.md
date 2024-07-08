@@ -1,5 +1,10 @@
 # AI_ML
 
+## Gen AI Resources
+
+- [Gen AI](https://github.com/genieincodebottle/generative-ai)
+
+
 ## Integrating your local large language model to VSCode
 - [Ollama - Download](https://ollama.com/)
 - ollama --help in terminal to check if its installed
