@@ -4,6 +4,16 @@
 
 - [Gen AI](https://github.com/genieincodebottle/generative-ai)
 
+## SDK/ Frameworks
+[Lang Chain](https://js.langchain.com/v0.2/docs/introduction/)
+[vercel AI SDK](https://sdk.vercel.ai/docs/introduction)
+[Haystack](https://haystack.deepset.ai/)
+[Github Copilot](https://github.com/features/copilot)
+[Codium](https://www.codium.ai/)
+
+- spine cone
+- vector databases
+
 
 ## Integrating your local large language model to VSCode
 - [Ollama - Download](https://ollama.com/)
