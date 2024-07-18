@@ -1,5 +1,16 @@
 # AI_ML
 
+## Roadmap
+- Python
+- version control git
+- DSA
+- SQL
+- Maths(probability, linear, calculus) and statistics
+- Data Handling(pandas, numpy, matplotlib, seaborn)
+- ML Algos (supervised(labeled data), unsupervised(unlabeled data)) [Tensorflow, PyTorch, Scikit Learn]
+- Advance (Ensemble, deep learning(NLP, Computer Vision))
+- Deployment(flask, django, docker)
+
 ## Gen AI Resources
 
 - [Gen AI](https://github.com/genieincodebottle/generative-ai)
