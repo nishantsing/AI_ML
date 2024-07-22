@@ -1,5 +1,15 @@
 # AI_ML
 
+## Deploy AI apps Free(Local First development)
+- Ollama to download open source AI model(phi3 - chatmodel), (llava-llama3 - Image) on machine.
+    - ollama list
+- Vercel AI SDK
+- libraries(npm)
+    - ai
+    - ollama
+    - ollama-ai-provider
+- create frontend using react/next
+
 ## Roadmap
 - Python
 - version control git
