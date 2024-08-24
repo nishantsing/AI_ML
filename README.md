@@ -1,14 +1,17 @@
 # AI_ML
 
 ## Deploy AI apps Free(Local First development)
-- Ollama to download open source AI model(phi3 - chatmodel), (llava-llama3 - Image) on machine.
+- Ollama to download open source AI model(phi3 - chatmodel), (llava-llama3 - Image) on machine.(private and dont share your data like chatgpt or gemini )
+    - ollama run phi3
     - ollama list
-- Vercel AI SDK
+    - ollama rm  
+- [Vercel AI SDK](https://sdk.vercel.ai/docs/introduction)
 - libraries(npm)
     - ai
     - ollama
     - ollama-ai-provider
 - create frontend using react/next
+- see the cheap-ai code to understand more.
 
 ## Roadmap
 - Python
@@ -54,7 +57,8 @@
 ```
 - Ctrl + I -> ask the model to do generate some code
 - "Select the code "Ctrl + L
-- 
+
+or can use codeium, github copilot for VSCode but they are not private.
 
 ## 15 Beginner ML Projects (Learn by doing)
 
@@ -119,3 +123,139 @@
     - Building Speech to Text app using Python and google cloud speec to text api.
     - Voice assistant using raspberry pi
     - speaker identification
+
+
+## AI Projects | python libraries
+
+1. Sentiment Analysis(nltk, pandas, scikit learn)
+2. Image Classifier (tenserflow, keras, pandas, numpy, matplotlib)
+3. AI Voice Assistant (speech recognition module, pyttsx3, llm(openai, ollama))
+4. Recommendation System (suprise, scikit learn, tensorflow, pytorch, pandas, numpy)
+5. AI Agent (Langchain, ollama(free), gpt(paid))
+
+## Text to speech
+
+```py
+from pygame import mixer
+from gtts import gTTS
+
+def main():
+    tts = gTTS('WOW')
+    tts.save('output.mp3')
+    mixer.init()
+
+mixer.music.load('output.mp3')
+mixer.music.play()
+
+if __name__ = "__main__":
+    main()
+```
+## ChatBot 
+
+1. Create it locally with ollama
+2. Create it with some online llm model like gemini, openai
+3. Create it using your own training data
+
+
+## RAG(Retrieval Augmented Generation)
+- We are providing some extra data to the model, and can use that instead of its on training data.
+
+## Private AI and connecting it to our docs
+
+- [Hugging Face](https://huggingface.co/models) - you can download the llmodels(which are pre trained) using ollama [Models you can run](https://ollama.com/library)
+- use WSL for windows. wsl --install
+- sudo apt update
+- sudo apt upgrade -y
+- curl -fsSL https://ollama.com/install.sh | sh
+- localhost:11434
+- ollama run llama2(mistral ... many more)
+
+- how to teach them on our data? the process is called fine tuning, but fine tuning such a model on new data can be very expensive at it will require gpus.
+- VMWare private AI can help you do that. [VMWare private AI](https://www.vmware.com/products/cloud-infrastructure/vsphere/ai-ml) VMare collaborating with Nvidia, IBM, Intel.
+
+or we can tach them using prompts which is not as extensive and takes less time.
+or RAG(Retrieval Augmented Generation) connecting LLM to a vector database.
+
+- [Private GPT](https://docs.privategpt.dev/overview/welcome/introduction)
+- [Private GPT by Martinez](https://github.com/joz-it/imartinez-privateGPT)
+- [Installing PrivateGPT on WSL with GPU support](https://medium.com/@docteur_rs/installing-privategpt-on-wsl-with-gpu-support-5798d763aa31)
+
+
+
+## Octo AI
+
+[PDF Summarizer - Adrian](https://youtu.be/OIYevBOSMxY)
+
+
+
+## Local AI with Open Web UI
+- [Open Web UI GUI](https://docs.openwebui.com/)
+- Setup WSL (Windows)
+    Install WSL and Ubuntu
+    wsl --install
+
+    Connect to a WSL Instance in a new window
+    wsl -d Ubuntu
+
+    Install Ollama
+    https://ollama.com/download
+
+    Add a model to Ollama
+    ollama pull llama2
+
+
+- "Watch" GPU Performance in Linux - watch -n 0.5 nvidia-smi
+
+- Get Dockers GPG key
+    #Add Docker's official GPG key:
+    sudo apt-get update
+    sudo apt-get install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
+    #Add the repository to Apt sources:
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt-get update
+
+- Install Docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+- Run Open WebUi Docker Container
+sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+localhost:8080
+
+- Stable Diffusion Install(Creating Images)
+Prereqs
+Pyenv
+- Install Pyenv prereqs
+    sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+    libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
+
+#Install Pyenv
+
+    curl https://pyenv.run | bash
+
+#Install Python 3.10
+
+pyenv install 3.10
+
+#Make it global
+
+pyenv global 3.10
+
+
+Install Stable Diffusion
+wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
+
+- Make it executable
+
+chmod +x webui.sh
+
+#Run it
+
+./webui.sh --listen --api
