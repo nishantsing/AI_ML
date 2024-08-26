@@ -1,6 +1,7 @@
 # AI_ML
 
 ## Deploy AI apps Free(Local First development)
+- [host ALL your AI locally](https://youtu.be/Wjrdr0NU4Sk)
 - Ollama to download open source AI model(phi3 - chatmodel), (llava-llama3 - Image) on machine.(private and dont share your data like chatgpt or gemini )
     - ollama run phi3
     - ollama list
@@ -259,3 +260,7 @@ chmod +x webui.sh
 #Run it
 
 ./webui.sh --listen --api
+
+## Using Fabric
+
+- [Fabric](https://github.com/danielmiessler/fabric?tab=readme-ov-file#environmental-variables)
