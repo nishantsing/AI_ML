@@ -263,4 +263,5 @@ chmod +x webui.sh
 
 ## Using Fabric
 
+- [Fabric - Network Chunk](https://youtu.be/UbDyjIIGaxQ)
 - [Fabric](https://github.com/danielmiessler/fabric?tab=readme-ov-file#environmental-variables)
