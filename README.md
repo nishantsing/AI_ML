@@ -14,6 +14,8 @@
 - create frontend using react/next
 - see the cheap-ai code to understand more.
 
+- [HuggingFace + Langchain | Run 1,000s of FREE AI Models Locally](https://youtu.be/1h6lfzJ0wZw)
+
 ## Roadmap
 - Python
 - version control git
